@@ -6,9 +6,9 @@ RUN curl https://repos.amxdigital.net/rhel-server-rhscl-7-rpms.repo  -o /etc/yum
 RUN microdnf clean all \
     && microdnf install -y zip unzip git zlib-devel libcurl-devel openssl-devel libxml2-devel rh-php72-php-devel pcre-devel yum gcc \
     && microdnf clean all \
-    && curl -u ${NEXUS_USER}:${NEXUS_PASSWORD} https://nexus-admin.videoconferenciaclaro.com/repository/videoconferencia_claro/imagemagick/ImageMagick-libs-7.0.10-25.x86_64.rpm -O \
-    && curl -u ${NEXUS_USER}:${NEXUS_PASSWORD} https://nexus-admin.videoconferenciaclaro.com/repository/videoconferencia_claro/imagemagick/ImageMagick-7.0.10-25.x86_64.rpm -O \
-    && curl -u ${NEXUS_USER}:${NEXUS_PASSWORD} https://nexus-admin.videoconferenciaclaro.com/repository/videoconferencia_claro/imagemagick/ImageMagick-devel-7.0.10-25.x86_64.rpm -O \
+    && curl -u 'docker-user:J4?bF4cV5lx4;*|gW4' https://nexus-admin.videoconferenciaclaro.com/repository/videoconferencia_claro/imagemagick/ImageMagick-libs-7.0.10-25.x86_64.rpm -O \
+    && curl -u 'docker-user:J4?bF4cV5lx4;*|gW4' https://nexus-admin.videoconferenciaclaro.com/repository/videoconferencia_claro/imagemagick/ImageMagick-7.0.10-25.x86_64.rpm -O \
+    && curl -u 'docker-user:J4?bF4cV5lx4;*|gW4' https://nexus-admin.videoconferenciaclaro.com/repository/videoconferencia_claro/imagemagick/ImageMagick-devel-7.0.10-25.x86_64.rpm -O \
     && yum install -y https://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/l/libraqm-0.7.0-4.el7.x86_64.rpm ; yum clean all \
     && yum install -y ImageMagick-libs-7.0.10-25.x86_64.rpm ; yum clean all \
     && yum install -y ImageMagick-7.0.10-25.x86_64.rpm ; yum clean all \
