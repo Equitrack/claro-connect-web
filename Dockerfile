@@ -1,7 +1,5 @@
 FROM nexus-admin.videoconferenciaclaro.com/atomic-rhel7-nginx-php-fpm72
 
-RUN curl https://repos.amxdigital.net/rhel-server-rhscl-7-rpms.repo  -o /etc/yum.repos.d/rhel-server-rhscl-7-rpms.repo && curl https://repos.amxdigital.net/rhel-7-server-rpms.repo -o /etc/yum.repos.d/rhel-7-server-rpms.repo
-
 # Verify ImageMagick version on https://imagemagick.org/download/linux/CentOS/x86_64/. It changes very often.
 RUN microdnf clean all \
     && microdnf install -y zip unzip git zlib-devel libcurl-devel openssl-devel libxml2-devel rh-php72-php-devel pcre-devel yum gcc \
